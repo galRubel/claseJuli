@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de dos clases</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .large {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
 <body>
+    <div class="box red large"></div>
+    <button id="toggle-class">Toggle Large Class</button>
 
-<h1>The Document Object</h1>
-<h2>The getElementById() Method</h2>
+    <script>
+        document.querySelector('#toggle-class').addEventListener('click', () => {
+            const box = document.querySelector('.box');
 
-<p id="demo"></p>
-
-<script>
-document.getElementById("demo").innerHTML = "Hello World";
-</script>
-
+            // Check if the box has the class 'large'
+            if (box.classList.contains('large')) {
+                // If it has the class 'large', remove it
+                box.classList.remove('large');
+                console.log('Class "large" removed');
+            } else {
+                // If it does not have the class 'large', add it
+                box.classList.add('large');
+                console.log('Class "large" added');
+            }
+        });
+    </script>
 </body>
 </html>

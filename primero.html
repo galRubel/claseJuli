@@ -4,26 +4,77 @@
 
 <h1 class="opinion">Flounder > Sebastian </h1>
 <h2>The getElementById() Method</h2>
-
+<div class="class-one class-two">This is the target element</div>
+<div class="class-one">This will not be selected</div>
+<div class="class-two">This will also not be selected</div>
 <p id="demo"></p>
 <p id="peorGaseosa">Fanta</p>
+<p class=".p"> </p>
+
+<p class=".p"> </p>
+
+<p class=".p"> </p>
+<p class="p">a </p>
+
+<p class=".p"> </p>
+
+<p class=".p"> </p>
+
+
+
+<p > </p>
 <button id="juntarBasura">Ocultar párrafo</button>
 <img class= "botellas" src="https://shopkamp.com/cdn/shop/files/4ayt42wscmx5z7p88z995lmutldw-Edited_1200x.png?v=1686190516" alt="fanta">
+<div class="box red large"></div>
+<button id="toggle-class">Toggle Large Class</button>
 
 <script>
-document.getElementById("demo").innerHTML = "Hello World";
+const element = document.querySelector('.class-one.class-two');
+console.log(element); // This will log the first <div> element with both classes
+element.style.backgroundColor="pink"
+document.getElementById("demo").innerHTML = "La costa esta Vacia";
 document.querySelector(".opinion").style.backgroundColor = "red";
 const botella = document.querySelector('.botellas');
- const boton = document.querySelector('#juntarBasura');
-boton.addEventListener('click', () => {
+const boton = document.querySelector('#juntarBasura');
+let todosLosParrafos = document.querySelectorAll(".p");
+for (let i=0; i <todosLosParrafos.length; i++) {
+ todosLosParrafos[i].style.backgroundColor = "orange";}
+ boton.addEventListener('click', () => {
     botella.style.display = 'none';
 });
-</script>
+document.querySelector('#toggle-class').addEventListener('click', () => {
+            const box = document.querySelector('.box');
 
+            // Check if the box has the class 'large'
+            if (box.classList.contains('large')) {
+                // If it has the class 'large', remove it
+                box.classList.remove('large');
+                console.log('Class "large" removed');
+            } else {
+                // If it does not have the class 'large', add it
+                box.classList.add('large');
+                console.log('Class "large" added');
+            }})
+</script>
 </body>
 </html>
 <style>
     .botellas{
         display: flex;
     }
+    .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .large {
+            width: 200px;
+            height: 200px;
+        }
 </style>
