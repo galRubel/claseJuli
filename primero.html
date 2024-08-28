@@ -6,12 +6,24 @@
 <h2>The getElementById() Method</h2>
 
 <p id="demo"></p>
+<p id="peorGaseosa">Fanta</p>
+<button id="juntarBasura">Ocultar párrafo</button>
+<img class= "botellas" src="https://shopkamp.com/cdn/shop/files/4ayt42wscmx5z7p88z995lmutldw-Edited_1200x.png?v=1686190516" alt="fanta">
 
 <script>
 document.getElementById("demo").innerHTML = "Hello World";
 document.querySelector(".opinion").style.backgroundColor = "red";
- 
+const botella = document.querySelector('.botellas');
+ const boton = document.querySelector('#juntarBasura');
+boton.addEventListener('click', () => {
+    botella.style.display = 'none';
+});
 </script>
 
 </body>
 </html>
+<style>
+    .botellas{
+        display: flex;
+    }
+</style>
