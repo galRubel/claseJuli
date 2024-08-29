@@ -29,16 +29,16 @@
 <button id="toggle-class">Toggle Large Class</button>
 
 <script>
-const element = document.querySelector('.class-one.class-two');
-console.log(element); // This will log the first <div> element with both classes
-element.style.backgroundColor="pink"
-document.getElementById("demo").innerHTML = "La costa esta Vacia";
-document.querySelector(".opinion").style.backgroundColor = "red";
-const botella = document.querySelector('.botellas');
+const element = document.querySelector('.class-one.class-two'); //hecho
+console.log(element); //hecho
+element.style.backgroundColor="pink"//hecho
+document.getElementById("demo").innerHTML = "La costa esta Vacia"; //hecho
+document.querySelector(".opinion").style.backgroundColor = "red"; //hecho
+const botella = document.querySelector('.botellas'); 
 const boton = document.querySelector('#juntarBasura');
-let todosLosParrafos = document.querySelectorAll(".p");
-for (let i=0; i <todosLosParrafos.length; i++) {
- todosLosParrafos[i].style.backgroundColor = "orange";}
+let todosLosParrafos = document.querySelectorAll(".p"); //hecho
+for (let i=0; i <todosLosParrafos.length; i++) {  //hecho
+ todosLosParrafos[i].style.backgroundColor = "orange";} //hecho
  boton.addEventListener('click', () => {
     botella.style.display = 'none';
 });
